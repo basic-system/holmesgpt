@@ -908,8 +908,8 @@ class ToolCallingLLM:
                                 StructuredToolResultStatus.ERROR
                             )
                             tool_call_result.result.error = (
-                                f"Tool call rejected: this command is not pre-approved and user approval is disabled for this session. "
-                                f"Only use pre-approved commands or built-in tools. Original reason: {tool_call_result.result.error}"
+                                "Tool call rejected: this command is not pre-approved and user approval is disabled for this session. "
+                                "Do not retry this command. Only use pre-approved commands or built-in tools to complete the task."
                             )
                             tool_result_dict = tool_call_result.to_client_dict()
 
